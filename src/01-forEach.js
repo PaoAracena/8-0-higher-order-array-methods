@@ -12,7 +12,9 @@ const exampleSongData = require("../data/songs");
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+  songs.forEach((song) => console.log(song.title))
+}
 //  const cancions = []
 //  let songs.title = artist 
 //  artist.forEach(() => {
@@ -41,10 +43,11 @@ function printSongDetails(songs) {
  */
 function printSongTitlesOverThreeMinutes(songs) {
   songs.forEach(song => {
-       if(songs.runtimeInSeconds > 180){
-      console.log(song.title)}}) 
+    if (song.runtimeInSeconds > 180){
+      console.log(song.title)
+      }
+  })
 }
-
 module.exports = {
   printAllSongTitles,
   printSongDetails,
